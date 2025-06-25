@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://crh1a5rhe5wp2"]
+
+[ext_resource type="Texture2D" uid="uid://c4loo0i6hwuls" path="res://ground/ground.png" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://dr41s8svt62ag" path="res://player/StickMan.gd" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://cowhtvhl34hty" path="res://player/stickboy.png" id="3_r0du0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(698.752, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm0pq"]
+size = Vector2(142, 314)
+
+[node name="Main" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+constant_linear_velocity = Vector2(300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(397, 237)
+scale = Vector2(1.683, 1)
+shape = SubResource("RectangleShape2D_glv2v")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(325.5, 237)
+scale = Vector2(1.319, 1)
+texture = ExtResource("1_glv2v")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+up_direction = Vector2(0.707107, -0.707107)
+script = ExtResource("2_r0du0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(2, 37)
+shape = SubResource("RectangleShape2D_cm0pq")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, 34)
+texture = ExtResource("3_r0du0")
