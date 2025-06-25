@@ -8,7 +8,7 @@
 size = Vector2(698.752, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cm0pq"]
-size = Vector2(142, 314)
+size = Vector2(142, 307)
 
 [node name="Main" type="Node2D"]
 
@@ -16,12 +16,12 @@ size = Vector2(142, 314)
 constant_linear_velocity = Vector2(300, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(397, 237)
+position = Vector2(738, 353)
 scale = Vector2(1.683, 1)
 shape = SubResource("RectangleShape2D_glv2v")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(325.5, 237)
+position = Vector2(666.5, 353)
 scale = Vector2(1.319, 1)
 texture = ExtResource("1_glv2v")
 
@@ -30,9 +30,9 @@ up_direction = Vector2(0.707107, -0.707107)
 script = ExtResource("2_r0du0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(2, 37)
+position = Vector2(96, 165.5)
 shape = SubResource("RectangleShape2D_cm0pq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, 34)
+position = Vector2(86, 166)
 texture = ExtResource("3_r0du0")
